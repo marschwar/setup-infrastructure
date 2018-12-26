@@ -10,7 +10,7 @@ DEVELOP="docker jdk-openjdk code maven"
 
 sudo pacman -Sy --noconfirm --needed $TOOLS $APPS $DEVELOP
 
-USER_REPOS="enpass-bin google-chrome intellij-idea-ultimate-edition sublime-text-dev oh-my-zsh-git"
+USER_REPOS="enpass-bin google-chrome intellij-idea-ultimate-edition oh-my-zsh-git"
 AUR_DIR="$HOME/git/aur"
 
 for repo in $USER_REPOS; do
@@ -34,7 +34,6 @@ sudo systemctl start fstrim.timer
 # Setting up environment
 alias ll='ls -l'
 alias la='ls -la'
-alias g='git status'
 
 sudo chsh -s /bin/zsh markus
 sudo archlinux-java set java-11-openjdk
