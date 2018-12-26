@@ -7,8 +7,9 @@ sudo pacman -Sy --noconfirm --needed $SYSTEM
 TOOLS="duplicity vim terminator powerline powerline-fonts"
 APPS="thunderbird inkscape gimp filezilla"
 DEVELOP="docker docker-compose jdk-openjdk code maven"
+STEAM="xf86-video-intel lib32-mesa ttf-liberation"
 
-sudo pacman -Sy --noconfirm --needed $TOOLS $APPS $DEVELOP
+sudo pacman -Sy --noconfirm --needed $TOOLS $APPS $DEVELOP $STEAM
 
 BUILD_MANUALLY_REPOS="pikaur"
 AUR_DIR="$HOME/git/aur"
