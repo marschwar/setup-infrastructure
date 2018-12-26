@@ -6,7 +6,7 @@ sudo pacman -Sy --noconfirm --needed $SYSTEM
 
 TOOLS="duplicity vim terminator powerline powerline-fonts"
 APPS="thunderbird inkscape gimp filezilla"
-DEVELOP="docker jdk-openjdk code maven"
+DEVELOP="docker docker-compose jdk-openjdk code maven"
 
 sudo pacman -Sy --noconfirm --needed $TOOLS $APPS $DEVELOP
 
@@ -30,10 +30,6 @@ sudo systemctl enable tlp.service
 sudo systemctl start tlp.service
 sudo systemctl enable fstrim.timer
 sudo systemctl start fstrim.timer
-
-# Setting up environment
-alias ll='ls -l'
-alias la='ls -la'
 
 sudo chsh -s /bin/zsh markus
 sudo archlinux-java set java-11-openjdk

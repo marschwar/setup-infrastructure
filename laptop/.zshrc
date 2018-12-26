@@ -89,5 +89,8 @@ export EDITOR='vim'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+PROVISION_DIR=$(dirname "$(readlink $HOME/.zshrc)")
+alias provision="$PROVISION_DIR/provision-arch.sh"
+
 powerline-daemon -q
 . /usr/lib/python3.7/site-packages/powerline/bindings/zsh/powerline.zsh
