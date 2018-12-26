@@ -10,10 +10,10 @@ DEVELOP="docker docker-compose jdk-openjdk code maven"
 
 sudo pacman -Sy --noconfirm --needed $TOOLS $APPS $DEVELOP
 
-USER_REPOS="enpass-bin google-chrome intellij-idea-ultimate-edition oh-my-zsh-git"
+BUILD_MANUALLY_REPOS="pikaur"
 AUR_DIR="$HOME/git/aur"
 
-for repo in $USER_REPOS; do
+for repo in $BUILD_MANUALLY_REPOS; do
 	repo_dir="$AUR_DIR/$repo"
 	if [[ ! -e $repo_dir ]]; then
 		git clone https://aur.archlinux.org/${repo}.git $repo_dir
@@ -21,6 +21,9 @@ for repo in $USER_REPOS; do
 		makepkg -sicr --noconfirm --needed
 	fi
 done
+
+ARCH_USER_REPOS="enpass-bin google-chrome intellij-idea-ultimate-edition oh-my-zsh-git"
+sudo pikaur -S --needed --noconfirm $ARCH_USER_REPOS
 
 sudo pacman -Syu --noconfirm
 
