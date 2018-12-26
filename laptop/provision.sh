@@ -5,7 +5,7 @@ SYSTEM="base-devel git tlp"
 sudo pacman -Sy --noconfirm --needed $SYSTEM
 
 TOOLS="duplicity vim terminator powerline powerline-fonts"
-APPS="thunderbird inkscape gimp chromium filezilla"
+APPS="thunderbird inkscape gimp filezilla"
 DEVELOP="docker jdk-openjdk code maven"
 
 sudo pacman -Sy --noconfirm --needed $TOOLS $APPS $DEVELOP
@@ -37,4 +37,5 @@ alias la='ls -la'
 alias g='git status'
 
 sudo chsh -s /bin/zsh markus
-archlinux-java set java-11-openjdk
+sudo archlinux-java set java-11-openjdk
+ln -sf $(pwd)/.zshrc $HOME/.zshrc
