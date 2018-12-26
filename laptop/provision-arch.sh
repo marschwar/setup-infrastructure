@@ -1,5 +1,5 @@
 #!/bin/bash
-
+SCRIPT_DIR=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
 
 SYSTEM="base-devel git tlp"
 sudo pacman -Sy --noconfirm --needed $SYSTEM
@@ -37,4 +37,4 @@ alias la='ls -la'
 
 sudo chsh -s /bin/zsh markus
 sudo archlinux-java set java-11-openjdk
-ln -sf $(pwd)/.zshrc $HOME/.zshrc
+ln -sf $SCRIPT_DIR/.zshrc $HOME/.zshrc
