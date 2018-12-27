@@ -23,7 +23,7 @@ for repo in $BUILD_MANUALLY_REPOS; do
 	fi
 done
 
-ARCH_USER_REPOS="enpass-bin google-chrome intellij-idea-ultimate-edition oh-my-zsh-git"
+ARCH_USER_REPOS="enpass-bin google-chrome intellij-idea-ultimate-edition oh-my-zsh-git slack-desktop"
 sudo pikaur -S --needed --noconfirm $ARCH_USER_REPOS
 
 sudo pacman -Syu --noconfirm
