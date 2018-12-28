@@ -5,7 +5,7 @@ SYSTEM="base-devel git tlp"
 sudo pacman -Sy --noconfirm --needed $SYSTEM
 
 TOOLS="duplicity vim terminator powerline powerline-fonts"
-APPS="thunderbird inkscape gimp filezilla"
+APPS="thunderbird inkscape gimp filezilla simplescreenrecorder"
 DEVELOP="docker docker-compose jdk-openjdk code maven"
 FONTS="adobe-source-sans-pro-fonts noto-fonts"
 STEAM="xf86-video-intel lib32-mesa ttf-liberation steam"
