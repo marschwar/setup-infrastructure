@@ -30,6 +30,10 @@ done
 ARCH_USER_REPOS="enpass-bin google-chrome intellij-idea-ultimate-edition oh-my-zsh-git slack-desktop"
 sudo pikaur -S --needed --noconfirm $ARCH_USER_REPOS
 
+ORPHAN_PACKAGES=$(pacman -Qtdq)
+if [ -n "$ORPHAN_PACKAGES" ]; then
+	sudo pacman -Rns --noconfirm $ORPHAN_PACKAGES
+fi
 sudo pacman -Syu --noconfirm
 
 #
