@@ -5,12 +5,15 @@ SYSTEM="base-devel git tlp"
 sudo pacman -Sy --noconfirm --needed $SYSTEM
 
 TOOLS="duplicity vim terminator powerline powerline-fonts"
-APPS="thunderbird inkscape gimp filezilla simplescreenrecorder"
+APPS="thunderbird inkscape gimp filezilla simplescreenrecorder vlc tomboy"
 DEVELOP="docker docker-compose jdk-openjdk code maven"
 FONTS="adobe-source-sans-pro-fonts noto-fonts"
 STEAM="xf86-video-intel lib32-mesa ttf-liberation steam"
 
+FOR_REMOVAL="empathy cheese lollypop bijiben"
+
 sudo pacman -Sy --noconfirm --needed $TOOLS $APPS $DEVELOP $STEAM $FONTS
+sudo pacman -R --noconfirm $FOR_REMOVAL
 
 BUILD_MANUALLY_REPOS="pikaur"
 AUR_DIR="$HOME/git/aur"
