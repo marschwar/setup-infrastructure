@@ -6,7 +6,7 @@ sudo pacman -Sy --noconfirm --needed $SYSTEM
 
 TOOLS="duplicity vim terminator powerline powerline-fonts"
 APPS="thunderbird inkscape gimp filezilla simplescreenrecorder vlc tomboy"
-DEVELOP="docker docker-compose jdk-openjdk code maven"
+DEVELOP="docker docker-compose jdk-openjdk code maven httpie"
 FONTS="adobe-source-sans-pro-fonts noto-fonts"
 STEAM="xf86-video-intel lib32-mesa ttf-liberation steam"
 
