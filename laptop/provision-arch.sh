@@ -6,8 +6,8 @@ sudo pacman -Sy --noconfirm --needed $SYSTEM
 
 TOOLS="duplicity vim terminator powerline powerline-fonts"
 APPS="thunderbird inkscape gimp filezilla simplescreenrecorder vlc tomboy"
-DEVELOP="docker docker-compose jdk-openjdk code maven httpie"
-FONTS="adobe-source-sans-pro-fonts noto-fonts"
+DEVELOP="docker docker-compose jdk-openjdk code maven httpie aws-cli"
+FONTS="adobe-source-sans-pro-fonts noto-fonts ttf-opensans"
 STEAM="xf86-video-intel lib32-mesa ttf-liberation steam"
 
 FOR_REMOVAL="empathy cheese lollypop bijiben gnome-calendar evolution"
@@ -46,3 +46,7 @@ sudo systemctl start fstrim.timer
 sudo chsh -s /bin/zsh markus
 sudo archlinux-java set java-11-openjdk
 ln -sf $SCRIPT_DIR/.zshrc $HOME/.zshrc
+
+sudo systemctl enable docker
+sudo systemctl start docker
+sudo usermod -a -G docker $(whoami)
