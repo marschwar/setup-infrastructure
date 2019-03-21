@@ -4,9 +4,9 @@ SCRIPT_DIR=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
 SYSTEM="base-devel git tlp"
 sudo pacman -Sy --noconfirm --needed $SYSTEM
 
-TOOLS="duplicity vim terminator powerline powerline-fonts"
+TOOLS="duplicity vim terminator powerline powerline-fonts snapd"
 APPS="thunderbird inkscape gimp filezilla simplescreenrecorder vlc tomboy"
-DEVELOP="docker docker-compose jdk-openjdk code maven httpie aws-cli"
+DEVELOP="docker docker-compose jdk-openjdk code maven httpie aws-cli postgresql-libs"
 FONTS="adobe-source-sans-pro-fonts noto-fonts ttf-opensans"
 STEAM="xf86-video-intel lib32-mesa ttf-liberation steam"
 
