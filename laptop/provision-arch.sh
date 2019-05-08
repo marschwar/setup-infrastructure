@@ -16,16 +16,18 @@ sudo pacman -Sy --noconfirm --needed $TOOLS $APPS $DEVELOP $STEAM $FONTS
 sudo pacman -R --noconfirm $FOR_REMOVAL
 
 BUILD_MANUALLY_REPOS="pikaur"
-AUR_DIR="$HOME/git/aur"
+AUR_DIR="/tmp/aur"
 
+install -d $AUR_DIR
+pushd $AUR_DIR
 for repo in $BUILD_MANUALLY_REPOS; do
 	repo_dir="$AUR_DIR/$repo"
-	if [[ ! -e $repo_dir ]]; then
-		git clone https://aur.archlinux.org/${repo}.git $repo_dir
-		cd $repo_dir
-		makepkg -sicr --noconfirm --needed
-	fi
+	git clone https://aur.archlinux.org/${repo}.git $repo_dir
+	cd $repo_dir
+	makepkg -sicr --noconfirm --needed
 done
+popd
+rm -rf $AUR_DIR
 
 ARCH_USER_REPOS="enpass-bin google-chrome intellij-idea-ultimate-edition oh-my-zsh-git slack-desktop hamster-time-tracker ttf-ms-fonts"
 sudo pikaur -S --needed --noconfirm $ARCH_USER_REPOS
