@@ -94,3 +94,5 @@ alias provision="$PROVISION_DIR/provision-arch.sh"
 
 powerline-daemon -q
 . /usr/lib/python3.7/site-packages/powerline/bindings/zsh/powerline.zsh
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
