@@ -92,6 +92,8 @@ export EDITOR='vim'
 PROVISION_DIR=$(dirname "$(readlink $HOME/.zshrc)")
 alias provision="$PROVISION_DIR/provision-arch.sh"
 
+export PATH=~/.local/bin:$PATH
+
 powerline-daemon -q
 . /usr/lib/python3.7/site-packages/powerline/bindings/zsh/powerline.zsh
 
