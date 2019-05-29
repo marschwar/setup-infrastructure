@@ -29,7 +29,7 @@ done
 popd
 rm -rf $AUR_DIR
 
-ARCH_USER_REPOS="enpass-bin google-chrome intellij-idea-ultimate-edition oh-my-zsh-git slack-desktop hamster-time-tracker ttf-ms-fonts"
+ARCH_USER_REPOS="enpass-bin google-chrome intellij-idea-ultimate-edition oh-my-zsh-git slack-desktop hamster-time-tracker ttf-ms-fonts gnome-shell-extension-arch-update"
 sudo pikaur -S --needed --noconfirm $ARCH_USER_REPOS
 
 ORPHAN_PACKAGES=$(pacman -Qtdq)
