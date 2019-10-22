@@ -98,3 +98,6 @@ powerline-daemon -q
 . /usr/lib/python3.7/site-packages/powerline/bindings/zsh/powerline.zsh
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
+
+# added by travis gem
+[ -f /home/markus/.travis/travis.sh ] && source /home/markus/.travis/travis.sh
